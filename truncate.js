@@ -3,6 +3,19 @@
 // TODO: Create a Function called truncateWords() that accepts two arguments: 
 // longText (a String with several words in it)
 // numWords (an Integer that sets the number of words you want in the returned text)
+function truncateWords (longText, numWords){
+var longTextArray = longText.split (' ');
+console.log(longTextArray);
+var arrayLength = longTextArray.length;
+console.log(arrayLength);
+var cutText = arrayLength - numWords;
+console.log(cutText);
+longTextArray.splice(numWords, cutText, "..." );
+console.log(longTextArray);
+var newText = longTextArray.join(" ");
+console.log(newText);
+return newText;
+}
 
 // TODO: Within the truncateWords() Function, complete the following steps:
 // 1. Use the split() function to split the String into an Array
