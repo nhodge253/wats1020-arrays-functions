@@ -6,12 +6,16 @@
 function truncateWords (longText, numWords){
 var longTextArray = longText.split (' ');
 console.log(longTextArray);
+  document.write(longTextArray + '</br>'); 
 var arrayLength = longTextArray.length;
 console.log(arrayLength);
+  document.write(arrayLength + '</br>' ); 
 var cutText = arrayLength - numWords;
 console.log(cutText);
+  document.write(cutText + '</br>' ); 
 longTextArray.splice(numWords, cutText, "..." );
 console.log(longTextArray);
+  document.write(longTextArray + '</br>'); 
 var newText = longTextArray.join(" ");
 console.log(newText);
 return newText;
